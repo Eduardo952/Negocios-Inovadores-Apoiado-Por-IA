@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#446B55">
+  <meta name="description" content="Prateleira. O estoque em ordem, o mercado em movimento.">
+  <title>Prateleira — Visão geral</title>
+  <link rel="icon" href="assets/icons/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/main.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Pular para o conteúdo</a>
+  <aside id="sidebar" class="sidebar" aria-label="Menu principal"></aside>
+  <button id="menu-shade" class="menu-shade" aria-label="Fechar menu" hidden></button>
+  <div class="workspace">
+    <header class="topbar"><div class="topbar-left"><button id="menu-toggle" class="icon-button menu-toggle" aria-label="Abrir navegação" aria-controls="sidebar" aria-expanded="false">☰</button><span class="breadcrumb">Meu mercado <span>/</span> <strong id="page-label">Visão geral</strong></span></div><div class="store-identity"><span class="local-dot" aria-hidden="true"></span><span id="market-name">Meu mercado</span><span class="store-avatar" aria-hidden="true">M</span></div></header>
+    <main id="content" tabindex="-1"><div class="loading-state"><span class="spinner"></span>Organizando as prateleiras…</div></main>
+    <footer class="app-footer"><span>Prateleira <span class="footer-dot">·</span> Cuidar do estoque é cuidar do negócio.</span><span id="storage-label">Dados neste navegador</span></footer>
+  </div>
+  <div id="toasts" class="toasts" aria-live="polite" aria-relevant="additions"></div>
+  <dialog id="modal" aria-labelledby="modal-title"></dialog>
+</body>
+</html>

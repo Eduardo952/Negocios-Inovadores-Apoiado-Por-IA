@@ -1,23 +1,14 @@
-# CRONUS — seu espaço de estudos
+﻿# Prateleira
 
-Aplicação responsiva em HTML, CSS e JavaScript puro, sem dependências, fontes externas ou build.
+Sistema web de controle de estoque para pequenos mercados, em HTML, CSS e JavaScript modular, com IndexedDB.
 
-## Executar
+A implementação está em [prateleira/](prateleira/). Consulte o [README da aplicação](prateleira/README.md) para funcionalidades, arquitetura e testes.
 
-Abra `index.html` em um navegador moderno. Para servir por HTTP, execute `python -m http.server 8080` nesta pasta e acesse `http://localhost:8080`.
+Para executar, sem instalar dependências:
 
-- `index.html`: estrutura semântica e onboarding.
-- `styles.css`: identidade monocromática, componentes e layouts responsivos.
-- `app.js`: timer, tarefas, estatísticas, perfil e persistência.
+```sh
+cd prateleira
+node server.js
+```
 
-## Funcionalidades
-
-- Nome pessoal, nome do espaço e áreas de interesse editáveis no botão de perfil.
-- Pomodoro de 25 minutos e pausa de 5 minutos, com início, pausa, retomada e reset. O relógio usa o horário de término, mantendo precisão ao trocar de aba ou recarregar. Ao terminar, o próximo ciclo é iniciado manualmente.
-- Tarefas com prazo, filtros, conclusão e exclusão. A lista também inclui tarefas futuras e vencidas, identificadas pelo prazo.
-- Tempo real de foco acumulado, incluindo sessões parciais; pausas não contam. Reiniciar o relógio preserva o tempo já estudado.
-- Ofensiva: cada dia local com pelo menos um minuto de foco conta. A sequência de ontem permanece válida até terminar o dia atual. Indicadores mostram os últimos sete dias.
-- Taxa de conclusão calculada sobre todas as tarefas cadastradas. Nenhuma estatística fictícia.
-- Sala demonstrativa com exemplos identificados. Mensagens próprias ficam apenas no navegador; não há chat multiusuário ou backend.
-
-Os dados usam a chave `cronus.v1` do `localStorage` e dependem do navegador e da origem. Limpar os dados do site apaga o histórico. Se o armazenamento estiver bloqueado, a aplicação informa e continua em memória. Para persistência consistente, prefira HTTP local ao protocolo `file:`. Outras abas da mesma origem recebem atualizações do estado pelo evento de armazenamento.
+Abra **http://127.0.0.1:8080**. Use Configurações para preparar seu mercado ou carregar os dados demonstrativos opcionais.
